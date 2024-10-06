@@ -1,0 +1,62 @@
+.list {
+    width: 80%;
+    height: 52%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 20%;
+}
+
+
+.list .item {
+    width: 21%;
+    height: 8200%;
+    border: 2px solid white;
+    color: white;
+    margin-top: -10%;
+}
+
+.item .img {
+    width: 100%;
+    height: 55%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.item .name {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-top: -10%;   
+}
+.price{
+    position: absolute;
+    margin-top: 6%;
+    
+}
+.stock{
+    position: absolute;
+    margin-top: 10%;
+}
+.description{
+    position: absolute;
+    margin-top: 14%; 
+}
+.price-item{
+    font-weight: 700;
+}
+.stock-item{
+    font-weight: 700;
+}
+.description-item{
+    font-weight: 700;
+}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
+import "../css/List.css";
 
 export function List() {
     const [list, setList] = useState([]);
@@ -27,7 +28,7 @@ export function List() {
 
     return (
         <>
-            <h1>Trang Chủ</h1>
+            {/* <h1>Trang Chủ</h1>
             <table border={1}>
                 <tr>
                     <th>Id</th>
@@ -51,7 +52,34 @@ export function List() {
                         <td><Link to={"/home/detail/" + item.id}><button>Detail</button></Link></td>
                     </tr>
                 ))}
-            </table>
+            </table> */}
+            
+
+            <div className="list">
+                {list.map((item) => (
+                    <div className="item">
+                        
+                        <div className="img">
+                            <img src={item.img} alt="" />
+                        </div>
+                        
+                        <div class="name">
+                            {item.name}
+                            <div className="price">                           
+                                <p className="price-item">Price: {item.price}</p>
+                        </div>
+                        <div className="stock">                           
+                                <p className="stock-item">Stock: {item.stock}</p>
+                        </div>
+                        <div className="description">                           
+                                <p className="description-item">Miêu Tả: {item.description}</p>
+                        </div>
+                        </div>
+                        
+                    </div>
+                ))}
+
+            </div>
         </>
     )
 }

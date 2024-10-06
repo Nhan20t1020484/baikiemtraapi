@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export function Edit() {
     const { id } = useParams();
-    const [oldStudent, setOldStudent] = useState({});
+    const [oldProduct, setOldStudent] = useState({});
     const navigate = useNavigate();
 
     let getOneData = () => {
@@ -31,7 +31,7 @@ export function Edit() {
             <h1>Sửa Thông Tin</h1>
             <Formik
                 initialValues={
-                    oldStudent 
+                    oldProduct
                 }
                 onSubmit={
                     (values) => {

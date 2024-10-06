@@ -1,12 +1,14 @@
 import { type } from "@testing-library/user-event/dist/type";
 import { Link } from "react-router-dom";
+import "../css/Header.css";
 
 export function Header() {
     return (
         <>
-        <button ><Link to="/home/list">Trang chủ</Link> </button> | 
-        <button><Link to="/home/add">Add</Link></button>
-        <hr/>
+        <div className="header">
+                <Link className="button-header-home" to="/home/list">Trang chủ</Link> |
+                <Link className="button-header-add" to="/home/add">Add</Link>
+            </div>
         </>
     )
 }
